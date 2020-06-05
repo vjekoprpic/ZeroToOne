@@ -2,6 +2,7 @@
     <string name="app_name">Zero To One</string>
     <string name="instruction_msg">Clicking on any tile changes the value of the surrounding tiles (up, down, left and right)</string>
     <string name="_0">0</string>
-    <string name="hs">HS:</string>
+    <string name="highScore">HighScore:</string>
     <string name="zerotoone">ZeroToOne</string>
+    <string name="score">Score:</string>
 </resources>

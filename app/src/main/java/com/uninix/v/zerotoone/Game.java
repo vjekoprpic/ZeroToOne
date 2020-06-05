@@ -38,14 +38,6 @@ public class Game extends AppCompatActivity {
         gridLayout.setColumnCount(GRID_SIZE);
         gridLayout.setRowCount(GRID_SIZE);
 
-        TextView textViewHighScore = findViewById(R.id.hs);
-        int currentHighScore = getHighScore();
-        if (currentHighScore == 0){
-            textViewHighScore.setText("/");
-        } else {
-            textViewHighScore.setText(String.valueOf(currentHighScore));
-        }
-
 
         for (int i = 0; i < GRID_SIZE; i++){
             Arrays.fill(board[i], 1);
@@ -188,7 +180,9 @@ public class Game extends AppCompatActivity {
             toast.show();
         }
 
-        Intent intent = new Intent(Game.this, StartScreen.class);
+        int[] data = {counter, highScore};
+        Intent intent = new Intent(Game.this, Solved.class);
+        intent.putExtra("results", data);
         startActivity(intent);
     }
 }
