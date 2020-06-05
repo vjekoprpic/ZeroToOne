@@ -84,7 +84,7 @@ public class Game extends AppCompatActivity {
                 cell.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        updateBoard(finalI, finalJ);
+                        updateBoard(finalI, finalJ, false);
                     }
                 });
 
@@ -96,7 +96,7 @@ public class Game extends AppCompatActivity {
         boardGenerator();
     }
 
-    private void updateBoard(int i, int j){
+    private void updateBoard(int i, int j, boolean gen){
 
         GridLayout gridLayout = findViewById(R.id.gridLayout);
 
@@ -124,8 +124,7 @@ public class Game extends AppCompatActivity {
         TextView result = findViewById(R.id.result);
         result.setText(String.valueOf(counter));
 
-        solvedCheck();
-
+        if (!gen) solvedCheck();
     }
 
     private void solvedCheck(){
@@ -147,7 +146,7 @@ public class Game extends AppCompatActivity {
         int iterations = GRID_SIZE*2 + (int)(Math.random() * ((GRID_SIZE*4 - GRID_SIZE*2) + 1));
 
         for (int i = 0; i < iterations; i++){
-            updateBoard(randomGen(), randomGen());
+            updateBoard(randomGen(), randomGen(), true);
         }
 
         counter = 0;

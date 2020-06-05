@@ -5,14 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.uninix.v.zerotoone.StartScreen">
 
     <TextView
         android:id="@+id/zerotoone"
         android:layout_width="0dp"
         android:layout_height="52dp"
-        android:background="@color/grey"
+        android:background="@color/colorPrimaryDark"
         android:gravity="center_horizontal"
         android:text="@string/zerotoone"
         android:textAlignment="center"
