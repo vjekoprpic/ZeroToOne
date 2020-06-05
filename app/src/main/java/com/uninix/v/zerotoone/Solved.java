@@ -1,7 +1,6 @@
 package com.uninix.v.zerotoone;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -10,11 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Arrays;
 
 public class Solved extends AppCompatActivity {
-
-    private int GRID_SIZE;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -23,6 +19,7 @@ public class Solved extends AppCompatActivity {
         setContentView(R.layout.activity_solved);
 
         Bundle extras = getIntent().getExtras();
+        assert extras != null;
         int[] data = extras.getIntArray("results");
 
         assert data != null;

@@ -8,22 +8,22 @@ import android.widget.ImageView;
 
 public class StartScreen extends AppCompatActivity {
 
-    ImageView ibcet;
-    ImageView ib6;
-    ImageView ib8;
-    ImageView ib10;
+    ImageView imageFour;
+    ImageView imageSix;
+    ImageView imageEight;
+    ImageView imageTen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
 
-        ibcet = (ImageView) findViewById(R.id.modeFour);
-        ib6 = (ImageView) findViewById(R.id.modeSix);
-        ib8 = (ImageView) findViewById(R.id.modeEight);
-        ib10 = (ImageView) findViewById(R.id.modeTen);
+        imageFour = findViewById(R.id.modeFour);
+        imageSix = findViewById(R.id.modeSix);
+        imageEight = findViewById(R.id.modeEight);
+        imageTen = findViewById(R.id.modeTen);
 
-        ibcet.setOnClickListener(new View.OnClickListener() {
+        imageFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartScreen.this, Game.class);
@@ -32,7 +32,7 @@ public class StartScreen extends AppCompatActivity {
             }
         });
 
-        ib6.setOnClickListener(new View.OnClickListener() {
+        imageSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartScreen.this, Game.class);
@@ -41,7 +41,7 @@ public class StartScreen extends AppCompatActivity {
             }
         });
 
-        ib8.setOnClickListener(new View.OnClickListener() {
+        imageEight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartScreen.this, Game.class);
@@ -50,7 +50,7 @@ public class StartScreen extends AppCompatActivity {
             }
         });
 
-        ib10.setOnClickListener(new View.OnClickListener() {
+        imageTen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartScreen.this, Game.class);
