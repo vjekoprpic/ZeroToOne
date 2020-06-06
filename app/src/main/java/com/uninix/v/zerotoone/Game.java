@@ -185,4 +185,13 @@ public class Game extends AppCompatActivity {
         intent.putExtra("results", data);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent = new Intent(Game.this, StartScreen.class);
+        startActivity(intent);
+
+    }
 }

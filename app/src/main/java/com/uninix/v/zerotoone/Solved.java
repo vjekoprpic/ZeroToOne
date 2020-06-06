@@ -1,7 +1,6 @@
 package com.uninix.v.zerotoone;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
