@@ -67,14 +67,28 @@
             android:textSize="36sp" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/playButton"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginBottom="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/play_button" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/buttonPlay"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/play_button" />
+
+        <ImageView
+            android:id="@+id/buttonMenu"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            app:srcCompat="@drawable/menu_button" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

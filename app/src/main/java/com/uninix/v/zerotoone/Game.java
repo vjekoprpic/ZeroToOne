@@ -180,7 +180,7 @@ public class Game extends AppCompatActivity {
             toast.show();
         }
 
-        int[] data = {counter, highScore};
+        int[] data = {counter, highScore, GRID_SIZE};
         Intent intent = new Intent(Game.this, Solved.class);
         intent.putExtra("results", data);
         startActivity(intent);

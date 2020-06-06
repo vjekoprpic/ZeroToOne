@@ -1,6 +1,7 @@
 package com.uninix.v.zerotoone;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 
 public class Solved extends AppCompatActivity {
+
+    private int GRID_SIZE;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -25,6 +28,7 @@ public class Solved extends AppCompatActivity {
         assert data != null;
         int score = data[0];
         int highScore = data[1];
+        GRID_SIZE = data[2];
 
         TextView textHighScore = findViewById(R.id.textHighScoreResult);
         textHighScore.setText(String.valueOf(highScore));
@@ -32,8 +36,16 @@ public class Solved extends AppCompatActivity {
         TextView textScore = findViewById(R.id.textScoreResult);
         textScore.setText(String.valueOf(score));
 
-        ImageView imageButton = findViewById(R.id.playButton);
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        ImageView buttonPlay = findViewById(R.id.buttonPlay);
+        buttonPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goPlay();
+            }
+        });
+
+        ImageView buttonMenu = findViewById(R.id.buttonMenu);
+        buttonMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Solved.this, StartScreen.class);
@@ -46,7 +58,15 @@ public class Solved extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(Solved.this, StartScreen.class);
+
+        goPlay();
+
+    }
+
+    private void goPlay(){
+        Intent intent = new Intent(Solved.this, Game.class);
+        intent.putExtra("mode", GRID_SIZE);
         startActivity(intent);
+
     }
 }
