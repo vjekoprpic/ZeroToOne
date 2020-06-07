@@ -75,7 +75,7 @@ public class Game extends AppCompatActivity {
 
                 cell.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {
+                   public void onClick(View view) {
                         updateBoard(finalI, finalJ, false);
                     }
                 });
@@ -172,6 +172,7 @@ public class Game extends AppCompatActivity {
 
         if(highScore == 0 || highScore > counter){
             setHighScore(counter);
+            highScore = counter;
             Toast toast = Toast.makeText(getApplicationContext(), "SOLVED! NEW HIGH SCORE!!!", Toast.LENGTH_SHORT);
             toast.show();
         }
